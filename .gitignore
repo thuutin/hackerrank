@@ -37,3 +37,6 @@ build/classes/test/PangramsTest.class
 build/classes/test/PlusMinusTest.class
 build/classes/test/ShortestReachTest.class
 build/classes/test/TimeConversionTest.class
+.idea/vcs.xml
+build/classes/main/BiggerIsGreater.class
+build/classes/test/BiggerIsGreaterTest.class

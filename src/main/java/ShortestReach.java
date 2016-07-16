@@ -44,7 +44,7 @@ public class ShortestReach {
     private static List<Integer> resolve(int startNode, int nodes, Map<Integer, List<Integer>> edges, int numEdges) {
         List<Integer> ints = new ArrayList<>(nodes);
         for (int i = 1; i <= nodes; i++) {
-            if (i != startNode){
+            if (i != startNode) {
                 ints.add(getDistance(startNode, i, edges, new HashSet<>()));
             }
         }
@@ -53,7 +53,7 @@ public class ShortestReach {
 
     static int getDistance(int startNode, int end, Map<Integer, List<Integer>> edges, Set<Integer> visited) {
         if (edges.get(startNode) == null || edges.get(startNode).size() == 0 || edges.get(end) == null || edges.get(end).size() == 0)
-            return  - 1;
+            return -1;
 
         List<Integer> initialNodes = new ArrayList<>(edges.get(startNode).size());
         initialNodes.addAll(edges.get(startNode));
@@ -61,13 +61,13 @@ public class ShortestReach {
         int breakMark = initialNodes.size();
         int i = 0;
         while (i < initialNodes.size()) {
-            if (i == breakMark){
+            if (i == breakMark) {
                 breakMark = initialNodes.size();
                 distance += 6;
             }
             Integer key = initialNodes.get(i);
             i++;
-            if (visited.contains(key)){
+            if (visited.contains(key)) {
                 continue;
             }
             visited.add(key);

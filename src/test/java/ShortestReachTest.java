@@ -24,10 +24,10 @@ public class ShortestReachTest {
         edges.put(1, new ArrayList<>(Arrays.asList(2,3)));
         edges.put(2, new ArrayList<>(Arrays.asList(1)));
         edges.put(2, new ArrayList<>(Arrays.asList(1)));
-        final int distance = ShortestReach.getDistance(1, 2, edges, new HashMap<>());
+        final int distance = ShortestReach.getDistance(1, 2, edges, new HashSet<>());
         assertEquals(6, distance);
-        assertEquals(-1, ShortestReach.getDistance(1, 4, edges, new HashMap<>()));
-        assertEquals(-1, ShortestReach.getDistance(2, 3, edges, new HashMap<>()));
-        assertEquals(-1, ShortestReach.getDistance(4, 1, edges, new HashMap<>()));
+        assertEquals(-1, ShortestReach.getDistance(1, 4, edges, new HashSet<>()));
+        assertEquals(-1, ShortestReach.getDistance(2, 3, edges, new HashSet<>()));
+        assertEquals(-1, ShortestReach.getDistance(4, 1, edges, new HashSet<>()));
     }
 }
