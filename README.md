@@ -1,3 +1,3 @@
 # hackerrank
 hackerrank
-Solution to many problem on hacker rank
+Solution to many problems on hackerrank
